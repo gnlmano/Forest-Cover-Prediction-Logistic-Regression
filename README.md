@@ -1,6 +1,31 @@
-# Forest-Cover-Prediction-Logistic-Regression
+# Course: Data Science for Decision Making
+## Module: Computational Machine Learning I - Assignment II
+### Logistic Regression
 
-This project is part of the module Computational Machine Learning. The task is to use a logistic regression model to predict forest cover types. The model is split into 2 parts:
-1. Binary classification
-2. Multiclass classification.
+Prediction project: forest cover classification
+In this project, you have to predict the class of forest cover (the predominant kind of tree cover) from strictly cartographic and environment variables.
+
+The actual forest cover type for a given observation (30 x 30 meter cell) was determined from US Forest Service (USFS) Region 2 Resource Information System (RIS) data. Independent variables were derived from data originally obtained from US Geological Survey (USGS) and USFS data. Data is in raw form (not scaled) and contains categorical data for qualitative independent variables (wilderness areas and soil types).
+
+You have further details on the data at covertype.info file and at https://archive.ics.uci.edu/ml/datasets/Covertype
+
+Be aware that the final dataset has been slighly modified from the original source data.
+
+As performance metric, you can use AUC in the binary classification case. For multi-class classification, check as well the confussion matrix and estimate the misclassification probabilities of different classes(check metrics.confusionmatrix and metrics.classificationreport in sklearn).
+
+Using MultiClassTrain.csv file build a predictive model for CoverType .
+Try a first a binary classification to predict class #7 (Krummholz, https://en.wikipedia.org/wiki/Krummholz), which is a rare valuable habitat. After that, then try multi-variate classification to predict all classes.
+For this analysis there is an extra test dataset. Once your code is submitted we will run a competition to see how you score in the test data. Hence have prepared also the necessary script to compute the accuracy estimate on the test data once released.
+
+You can follow those steps in your first implementation:
+
+1. Explore and understand the dataset.
+2. Create dummy variables for relevant categorical features
+3. Reformat the Class_type variable into a binary one, being class #7 the target variable versus the others.
+4. Build an initial binary model for class #7 versus the other ones and test it on the same input data.
+5. Assess expected accuracy using cross-validation
+6. Report which variable impacts more on results
+7. Try to improve it using methods to tackle class imbalance.
+8. Repeat 4., 5., 6. and 7. now with a multi-class model (EXTENDED PROJECT)
+9. Produce .csv for kaggle testing
 
